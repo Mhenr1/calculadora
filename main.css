@@ -11,32 +11,39 @@ body {
 
 #calculadora {
     width: 320px;
-    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(100px, auto) 50px;
     gap: 5px;
-    border-radius: 12px 12px 0 0;
+    padding: 5px;
+    border: 1px solid black;
+    background: #F7F9E8;
 }
 
 
 
 
-#calculadora div:not(#display) {
+#calculadora div {
     border: 1px solid silver;
     text-align: center;
-
-
+    background: #DF9F94;
+    border: 1px solid black;
 }
 
 div#display {
     grid-column-start: 1;
     grid-column-end: 5;
-    border-bottom: 1px solid black;
     display: flex;
     align-items: flex-end;
-   
     word-break: break-all;
+    background: #C3D587;
+    padding:3px
+}
+
+#calculadora,
+div#display {
+    border-radius: 5px 5px 0 0;
+
 }
 
 div#display.erro {
@@ -47,9 +54,21 @@ div#display.erro {
     content: "Erro"
 }
 
-#igual {
+#calculadora div#igual {
     grid-column-start: 2;
     grid-column-end: 5;
+    background: #8AA51D
+}
 
+#calculadora div.operadores {
 
+    background: #EF7A65;
+}
+
+#calculadora div:hover:not(#display) {
+
+    filter: brightness(75%) !important;
+    outline: 3px solid white;
+    outline-offset: -2px;
+    color: azure
 }

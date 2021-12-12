@@ -7,7 +7,8 @@ function configura({
     target
 }) {
     const display = document.getElementById('display');
-    if (display.innerText == "Infinity") {
+    const limpar = ["Infinity", "0"]
+    if (limpar.includes(display.innerText)) {
         display.innerText = ""
     }
     display.classList.remove('erro');
