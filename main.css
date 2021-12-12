@@ -10,7 +10,8 @@ body {
 }
 
 #calculadora {
-    width: 320px;
+    width:100vw;
+    max-width: 480px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(100px, auto) 50px;
